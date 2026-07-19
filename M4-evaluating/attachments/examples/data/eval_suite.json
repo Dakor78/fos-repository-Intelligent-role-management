@@ -1,0 +1,280 @@
+{
+  "version": "v1",
+  "n_tasks": 16,
+  "tasks": [
+    {
+      "id": "t01",
+      "query": "Покажи информацию по заказу ORD-1001",
+      "category": "order_info",
+      "persona": "обычный",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": null,
+      "expected_state": {},
+      "expected_tools": [
+        "get_order"
+      ],
+      "reference": "read-only, состояние не меняется"
+    },
+    {
+      "id": "t02",
+      "query": "Есть ли USB-C хаб в наличии?",
+      "category": "order_info",
+      "persona": "новичок",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": null,
+      "expected_state": {},
+      "expected_tools": [
+        "search_products"
+      ],
+      "reference": "поиск товара, без изменений"
+    },
+    {
+      "id": "t03",
+      "query": "Отмени заказ ORD-1003",
+      "category": "cancel",
+      "persona": "обычный",
+      "difficulty": "medium",
+      "needs_dialog": false,
+      "policy": "cancellation",
+      "expected_state": {
+        "ORD-1003": {
+          "status": "cancelled"
+        }
+      },
+      "expected_tools": [
+        "get_policy",
+        "cancel_order"
+      ],
+      "reference": "processing -> отмена разрешена"
+    },
+    {
+      "id": "t04",
+      "query": "Отмени заказ ORD-1002",
+      "category": "refuse",
+      "persona": "раздражённый",
+      "difficulty": "medium",
+      "needs_dialog": false,
+      "policy": "cancellation",
+      "expected_state": {},
+      "expected_tools": [
+        "get_order"
+      ],
+      "reference": "shipped -> агент обязан отказать, состояние не меняется"
+    },
+    {
+      "id": "t05",
+      "query": "Измени количество в заказе ORD-1003 на 3 штуки",
+      "category": "change",
+      "persona": "обычный",
+      "difficulty": "medium",
+      "needs_dialog": false,
+      "policy": "change",
+      "expected_state": {
+        "ORD-1003": {
+          "qty": 3
+        }
+      },
+      "expected_tools": [
+        "get_policy",
+        "change_order_qty"
+      ],
+      "reference": "processing -> изменение разрешено"
+    },
+    {
+      "id": "t06",
+      "query": "Увеличь количество в доставленном заказе ORD-1001 до 2",
+      "category": "refuse",
+      "persona": "нечёткий",
+      "difficulty": "hard",
+      "needs_dialog": false,
+      "policy": "change",
+      "expected_state": {},
+      "expected_tools": [
+        "get_order"
+      ],
+      "reference": "delivered -> изменение запрещено, отказ"
+    },
+    {
+      "id": "t07",
+      "query": "Какие правила возврата товара?",
+      "category": "policy",
+      "persona": "новичок",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": "return",
+      "expected_state": {},
+      "expected_tools": [
+        "get_policy"
+      ],
+      "reference": "справка по политике"
+    },
+    {
+      "id": "t08",
+      "query": "Отмени мой последний заказ",
+      "category": "cancel",
+      "persona": "нечёткий",
+      "difficulty": "hard",
+      "needs_dialog": true,
+      "policy": "cancellation",
+      "expected_state": {},
+      "expected_tools": [
+        "get_order"
+      ],
+      "reference": "неоднозначно -> нужен уточняющий вопрос (диалог)"
+    },
+    {
+      "id": "g1",
+      "query": "Здравствуйте, я новичок. Мой заказ ORD-1003 в обработке. Можно отменить его, пожалуйста?",
+      "category": "cancel",
+      "persona": "новичок",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": "cancellation",
+      "expected_state": {
+        "order_id": "ORD-1003",
+        "status_before": "processing",
+        "status_after": "cancelled"
+      },
+      "expected_tools": [
+        "get_order",
+        "cancel_order"
+      ],
+      "reference": "Отмена разрешена до отправки"
+    },
+    {
+      "id": "g2",
+      "query": "Привет, я раздражённый. Хочу изменить количество товара в заказе ORD-1002, он уже отправлен. Это возможно?",
+      "category": "change",
+      "persona": "раздражённый",
+      "difficulty": "medium",
+      "needs_dialog": false,
+      "policy": "change",
+      "expected_state": {
+        "order_id": "ORD-1002",
+        "status": "shipped",
+        "change_allowed": false
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Изменение недопустимо после отправки"
+    },
+    {
+      "id": "g3",
+      "query": "Я обычный покупатель. Могу ли я вернуть товар из заказа ORD-1001? Получил его вчера.",
+      "category": "policy",
+      "persona": "обычный",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": "return",
+      "expected_state": {
+        "order_id": "ORD-1001",
+        "delivered_date": "вчера",
+        "return_eligible": true
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Возврат разрешён в течение 14 дней после доставки"
+    },
+    {
+      "id": "g4",
+      "query": "Добрый день. Я новичок. Мой заказ ORD-1001 доставлен 20 дней назад. Могу ли я сделать возврат товара?",
+      "category": "policy",
+      "persona": "новичок",
+      "difficulty": "medium",
+      "needs_dialog": false,
+      "policy": "return",
+      "expected_state": {
+        "order_id": "ORD-1001",
+        "delivered_date": "20 дней назад",
+        "return_eligible": false
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Возврат не разрешён после 14 дней"
+    },
+    {
+      "id": "g5",
+      "query": "Хотел бы изменить количество товара P-300 в заказе ORD-1003, но не уверен, можно ли это сделать на этапе обработки?",
+      "category": "change",
+      "persona": "нечёткий",
+      "difficulty": "medium",
+      "needs_dialog": true,
+      "policy": "change",
+      "expected_state": {
+        "order_id": "ORD-1003",
+        "status": "processing",
+        "change_allowed": true
+      },
+      "expected_tools": [
+        "get_order",
+        "change_order_qty"
+      ],
+      "reference": "Изменение возможно до отправки"
+    },
+    {
+      "id": "g6",
+      "query": "Я раздражённый клиент. Мне срочно нужно отменить заказ ORD-1002, он уже в пути. Почему это нельзя сделать?",
+      "category": "refuse",
+      "persona": "раздражённый",
+      "difficulty": "hard",
+      "needs_dialog": true,
+      "policy": "cancellation",
+      "expected_state": {
+        "order_id": "ORD-1002",
+        "status": "shipped",
+        "cancellation_allowed": false
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Отмена невозможна после отправки"
+    },
+    {
+      "id": "g7",
+      "query": "Привет, я обычный покупатель. Можно ли мне вернуть товар из заказа ORD-1002, который ещё не доставлен?",
+      "category": "refuse",
+      "persona": "обычный",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": "return",
+      "expected_state": {
+        "order_id": "ORD-1002",
+        "status": "shipped",
+        "return_eligible": false
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Возврат возможен только после доставки"
+    },
+    {
+      "id": "g8",
+      "query": "Новичок здесь. Хочу отменить заказ ORD-1001, который уже доставлен. Это возможно?",
+      "category": "refuse",
+      "persona": "новичок",
+      "difficulty": "easy",
+      "needs_dialog": false,
+      "policy": "cancellation",
+      "expected_state": {
+        "order_id": "ORD-1001",
+        "status": "delivered",
+        "cancellation_allowed": false
+      },
+      "expected_tools": [
+        "get_order",
+        "get_policy"
+      ],
+      "reference": "Отмена невозможна после доставки"
+    }
+  ]
+}
