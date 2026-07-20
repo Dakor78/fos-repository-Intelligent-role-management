@@ -10,6 +10,7 @@
 | `02_mcp_protocol.ipynb` | 5. MCP | MCP-сервер магазина (`FastMCP`); клиент, discovery, вызов; мост MCP→LLM; замена сервера без правки агента |
 | `03_memory_and_rag.ipynb` | 6. Память и RAG | Кратко-/долговременная/контекстная память; entity memory; эмбеддинги + BM25; двухстадийный поиск; переписывание запроса; HyDE; RAG-ответ |
 | `04_guardrails.ipynb` | 7. Защитный контур | Модель угроз; маскирование PII; детектор инъекций (regex + ML на реальном датасете); релевантность; валидация действий, allowlist, human-in-the-loop; инспекция вывода инструментов; метрика attack success rate |
+| `05_langchain_langgraph.ipynb` | 4–6 *(на фреймворке)* | Тот же цикл «модель ⇄ инструменты» на **LangChain/LangGraph**: инструменты через `@tool`, готовый агент `create_agent`, кастомный граф (`StateGraph`, `ToolNode`, `tools_condition`), память через checkpointer. Все используемые методы/декораторы/функции обеих библиотек подробно разобраны в тексте |
 
 Сопутствующие файлы: `mcp_shop_server.py`, `mcp_shop_server_v2.py` — MCP-серверы для ноутбука 02.
 
