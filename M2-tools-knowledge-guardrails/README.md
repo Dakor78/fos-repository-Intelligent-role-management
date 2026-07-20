@@ -22,7 +22,7 @@
 
 ## Демонстрационные материалы
 
-[attachments/examples/](attachments/examples/) — четыре Python-ноутбука со сквозным примером (ассистент интернет-магазина) по одной теме каждый: инструменты и tool calling, MCP, память и RAG, защитный контур. Ноутбуки подробно комментированы и запускаются сверху вниз; зависимости зафиксированы в [attachments/examples/requirements.txt](attachments/examples/requirements.txt). Подробности — в [attachments/examples/README.md](attachments/examples/README.md).
+[attachments/examples/](attachments/examples/) — пять Python-ноутбуков со сквозным примером (ассистент интернет-магазина): четыре по темам модуля (инструменты и tool calling, MCP, память и RAG, защитный контур) плюс пример на фреймворке — тот же агент на **LangChain/LangGraph**. Ноутбуки подробно комментированы и запускаются сверху вниз; зависимости зафиксированы в [attachments/examples/requirements.txt](attachments/examples/requirements.txt). Подробности — в [attachments/examples/README.md](attachments/examples/README.md).
 
 ## Источники датасетов
 
