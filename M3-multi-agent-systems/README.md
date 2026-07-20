@@ -25,7 +25,7 @@
 
 ## Демонстрационные материалы
 
-[attachments/examples/](attachments/examples/) — пять Python-ноутбуков, по одной архитектуре/теме на каждую (ReAct, типы взаимодействия, иерархическая МАС с критиком, A2A-контракты, бенчмарк и подбор моделей), на общем домене и общем наборе инструментов. Зависимости зафиксированы в [attachments/examples/requirements.txt](attachments/examples/requirements.txt); доступ к модели — через переменные окружения (ключ в код не вставляется). Подробности — в [attachments/examples/README.md](attachments/examples/README.md).
+[attachments/examples/](attachments/examples/) — шесть Python-ноутбуков: пять по архитектурам/темам (ReAct, типы взаимодействия, иерархическая МАС с критиком, A2A-контракты, бенчмарк и подбор моделей) плюс реализация иерархической МАС на фреймворке **LangGraph**, на общем домене и общем наборе инструментов. Зависимости зафиксированы в [attachments/examples/requirements.txt](attachments/examples/requirements.txt); доступ к модели — через переменные окружения (ключ в код не вставляется). Подробности — в [attachments/examples/README.md](attachments/examples/README.md).
 
 ## Дополнительные материалы
 
