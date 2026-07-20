@@ -73,7 +73,7 @@
 - [Модуль 1](M1-Intelligent-agent/README.md) — описания КИМ для первого модуля;
 - [Модуль 2](M2-tools-knowledge-guardrails/README.md) — описания КИМ для второго модуля;
 - [Модуль 3](M3-multi-agent-systems/README.md) — описания КИМ для третьего модуля;
-- [Модуль 4](M4-evaluating/README.md) — описания КИМ для четвертого модуля; 
+- [Модуль 4](M4-evaluation-and-operations/README.md) — описания КИМ для четвертого модуля; 
 - [Проектная работа](Project/README.md) — интегральный КИМ по нескольким результатам обучения;
 - [Экзамен](Exam/README.md) — промежуточная аттестация.
 
@@ -100,7 +100,7 @@
 ├── M1-Intelligent-agent/
 ├── M2-tools-knowledge-guardrails/
 ├── M3-multi-agent-systems/
-├── M4-evaluating/
+├── M4-evaluation-and-operations/
 ├── Project/
 ├── Exam/
 ├── methodical-guidelines/
