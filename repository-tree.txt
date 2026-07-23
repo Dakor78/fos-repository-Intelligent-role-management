@@ -11,6 +11,7 @@
 │
 ├── M1-Intelligent-agent
 │   ├── README.md
+│   ├── kim-00-diagnostic.md
 │   ├── kim-lab-01.md
 │   ├── kim-lab-02.md
 │   ├── kim-lab-03.md
@@ -29,6 +30,7 @@
 │
 ├── M2-tools-knowledge-guardrails
 │   ├── README.md
+│   ├── kim-00-diagnostic.md
 │   ├── kim-01-practical-work.md
 │   ├── kim-02-open-questions.md
 │   ├── rubric-01.md
@@ -53,6 +55,7 @@
 ├── M3-multi-agent-systems
 │   ├── README.md
 │   ├── appendix-01-task-variants.md
+│   ├── kim-00-diagnostic.md
 │   ├── kim-01-practical-work-cloud.md
 │   ├── kim-02-practical-work-edge.md
 │   └── attachments
@@ -70,6 +73,7 @@
 │
 ├── M4-evaluation-and-operations
 │   ├── README.md
+│   ├── kim-00-diagnostic.md
 │   ├── kim-01-practical-work.md
 │   └── attachments
 │       └── examples
