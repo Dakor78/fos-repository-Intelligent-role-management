@@ -1,146 +1,98 @@
-├── README.md
-├── LICENSE.md
-├── CONTRIBUTING.md
-├── .gitignore
-├── repository-tree.txt
-│
-├── Exam
-│   ├── README.md
-│   ├── question-bank.md
-│   └── attachments
-│       └── .gitkeep
-│
-├── M1-Intelligent-agent
-│   ├── README.md
-│   ├── kim-00-diagnostic.md
-│   ├── kim-lab-01.md
-│   ├── kim-lab-02.md
-│   ├── kim-lab-03.md
-│   ├── kim-test.md
-│   ├── attachments
-│   │   └── examples
-│   │       ├── 01_tokenization_and_context.ipynb
-│   │       ├── 02_decoding_and_reproducibility.ipynb
-│   │       ├── 03_llm_limits_and_failures.ipynb
-│   │       ├── 04_basic_agent_loop.ipynb
-│   │       ├── 05_agent_execution_graph_langgraph.ipynb
-│   │       ├── README.md
-│   │       └── requirements.txt
-│   └── resource
-│       └── kim-lab-01-meth-sample.md
-│
-├── M2-tools-knowledge-guardrails
-│   ├── README.md
-│   ├── kim-00-diagnostic.md
-│   ├── kim-01-practical-work.md
-│   ├── kim-02-open-questions.md
-│   ├── rubric-01.md
-│   └── attachments
-│       └── examples
-│           ├── 01_tools_tool_calling.ipynb
-│           ├── 02_mcp_protocol.ipynb
-│           ├── 03_memory_and_rag.ipynb
-│           ├── 04_guardrails.ipynb
-│           ├── 05_langchain_langgraph.ipynb
-│           ├── README.md
-│           ├── mcp_shop_server.py
-│           ├── mcp_shop_server_v2.py
-│           ├── requirements.txt
-│           └── data
-│               ├── prepare_data.py
-│               ├── products.csv
-│               ├── prompt_injections.parquet
-│               ├── rag_embeddings.npy
-│               └── squad_dev.json
-│
-├── M3-multi-agent-systems
-│   ├── README.md
-│   ├── appendix-01-task-variants.md
-│   ├── kim-00-diagnostic.md
-│   ├── kim-01-practical-work-cloud.md
-│   ├── kim-02-practical-work-edge.md
-│   └── attachments
-│       └── examples
-│           ├── 01_react_single_agent.ipynb
-│           ├── 02_interaction_types.ipynb
-│           ├── 03_mas_architectures.ipynb
-│           ├── 04_a2a_protocols.ipynb
-│           ├── 05_benchmark_and_model_economics.ipynb
-│           ├── 06_langgraph_mas.ipynb
-│           ├── README.md
-│           ├── mas_agents.py
-│           ├── mas_domain.py
-│           └── requirements.txt
-│
-├── M4-evaluation-and-operations
-│   ├── README.md
-│   ├── kim-00-diagnostic.md
-│   ├── kim-01-practical-work.md
-│   └── attachments
-│       └── examples
-│           ├── 01_agent_and_environment.ipynb
-│           ├── 02_task_suite.ipynb
-│           ├── 03_harness_and_graders.ipynb
-│           ├── 04_llm_judge_kappa.ipynb
-│           ├── 05_regression_and_ops.ipynb
-│           ├── 06_public_benchmark_tau2.ipynb
-│           ├── 07_langgraph_agent_eval.ipynb
-│           ├── README.md
-│           ├── eval_env.py
-│           ├── eval_harness.py
-│           ├── requirements.txt
-│           └── data
-│               └── eval_suite.json
-│
-├── Project
-│   ├── README.md
-│   └── attachments
-│       └── .gitkeep
-│
-├── data
-│   ├── README.md
-│   └── krm-v3.0.xlsx
-│
-├── docs
-│   ├── README.md
-│   ├── quality-checklist.md
-│   └── rpd.md
-│
-├── methodical-guidelines
-│   ├── README.md
-│   ├── students
-│   │   └── README.md
-│   ├── teachers-assessment
-│   │   └── README.md
-│   └── teachers-resources
-│       └── README.md
-│
-├── other
-│   └── README.md
-│
-├── resources
-│   ├── README.md
-│   ├── benchmarks
-│   │   └── README.md
-│   ├── datasets
-│   │   └── README.md
-│   ├── llm-prompts
-│   │   └── README.md
-│   ├── other
-│   │   └── README.md
-│   ├── papers
-│   │   └── README.md
-│   ├── problem-banks
-│   │   └── README.md
-│   ├── software
-│   │   └── python-libs
-│   │       └── README.md
-│   ├── test-banks
-│   │   └── README.md
-│   └── textbooks
-│       └── README.md
-│
-├── team
-│   ├── README.md
-│   └── images
-│       └── .gitkeep
+.gitignore
+CONTRIBUTING.md
+Exam/README.md
+Exam/attachments/.gitkeep
+Exam/question-bank.md
+LICENSE.md
+M1-Intelligent-agent/README.md
+M1-Intelligent-agent/attachments/examples/01_tokenization_and_context.ipynb
+M1-Intelligent-agent/attachments/examples/02_decoding_and_reproducibility.ipynb
+M1-Intelligent-agent/attachments/examples/03_llm_limits_and_failures.ipynb
+M1-Intelligent-agent/attachments/examples/04_basic_agent_loop.ipynb
+M1-Intelligent-agent/attachments/examples/05_agent_execution_graph_langgraph.ipynb
+M1-Intelligent-agent/attachments/examples/README.md
+M1-Intelligent-agent/attachments/examples/requirements.txt
+M1-Intelligent-agent/kim-00-diagnostic.md
+M1-Intelligent-agent/kim-lab-01.md
+M1-Intelligent-agent/kim-lab-02.md
+M1-Intelligent-agent/kim-lab-03.md
+M1-Intelligent-agent/kim-test.md
+M1-Intelligent-agent/resource/kim-lab-01-meth-sample.md
+M1-Intelligent-agent/resource/llm-parameters-and-vram.md
+M2-tools-knowledge-guardrails/README.md
+M2-tools-knowledge-guardrails/attachments/examples/01_tools_tool_calling.ipynb
+M2-tools-knowledge-guardrails/attachments/examples/02_mcp_protocol.ipynb
+M2-tools-knowledge-guardrails/attachments/examples/03_memory_and_rag.ipynb
+M2-tools-knowledge-guardrails/attachments/examples/04_guardrails.ipynb
+M2-tools-knowledge-guardrails/attachments/examples/05_langchain_langgraph.ipynb
+M2-tools-knowledge-guardrails/attachments/examples/README.md
+M2-tools-knowledge-guardrails/attachments/examples/data/prepare_data.py
+M2-tools-knowledge-guardrails/attachments/examples/data/products.csv
+M2-tools-knowledge-guardrails/attachments/examples/data/prompt_injections.parquet
+M2-tools-knowledge-guardrails/attachments/examples/data/rag_embeddings.npy
+M2-tools-knowledge-guardrails/attachments/examples/data/squad_dev.json
+M2-tools-knowledge-guardrails/attachments/examples/mcp_shop_server.py
+M2-tools-knowledge-guardrails/attachments/examples/mcp_shop_server_v2.py
+M2-tools-knowledge-guardrails/attachments/examples/requirements.txt
+M2-tools-knowledge-guardrails/kim-00-diagnostic.md
+M2-tools-knowledge-guardrails/kim-01-practical-work.md
+M2-tools-knowledge-guardrails/kim-02-open-questions.md
+M2-tools-knowledge-guardrails/rubric-01.md
+M3-multi-agent-systems/README.md
+M3-multi-agent-systems/appendix-01-task-variants.md
+M3-multi-agent-systems/attachments/examples/01_react_single_agent.ipynb
+M3-multi-agent-systems/attachments/examples/02_interaction_types.ipynb
+M3-multi-agent-systems/attachments/examples/03_mas_architectures.ipynb
+M3-multi-agent-systems/attachments/examples/04_a2a_protocols.ipynb
+M3-multi-agent-systems/attachments/examples/05_benchmark_and_model_economics.ipynb
+M3-multi-agent-systems/attachments/examples/06_langgraph_mas.ipynb
+M3-multi-agent-systems/attachments/examples/07_cascade_routing_demo.ipynb
+M3-multi-agent-systems/attachments/examples/README.md
+M3-multi-agent-systems/attachments/examples/mas_agents.py
+M3-multi-agent-systems/attachments/examples/mas_domain.py
+M3-multi-agent-systems/attachments/examples/requirements.txt
+M3-multi-agent-systems/kim-00-diagnostic.md
+M3-multi-agent-systems/kim-01-practical-work-cloud.md
+M3-multi-agent-systems/kim-02-practical-work-edge.md
+M3-multi-agent-systems/model-collaboration-patterns.md
+M4-evaluation-and-operations/README.md
+M4-evaluation-and-operations/attachments/examples/01_agent_and_environment.ipynb
+M4-evaluation-and-operations/attachments/examples/02_task_suite.ipynb
+M4-evaluation-and-operations/attachments/examples/03_harness_and_graders.ipynb
+M4-evaluation-and-operations/attachments/examples/04_llm_judge_kappa.ipynb
+M4-evaluation-and-operations/attachments/examples/05_regression_and_ops.ipynb
+M4-evaluation-and-operations/attachments/examples/06_public_benchmark_tau2.ipynb
+M4-evaluation-and-operations/attachments/examples/07_langgraph_agent_eval.ipynb
+M4-evaluation-and-operations/attachments/examples/README.md
+M4-evaluation-and-operations/attachments/examples/data/eval_suite.json
+M4-evaluation-and-operations/attachments/examples/eval_env.py
+M4-evaluation-and-operations/attachments/examples/eval_harness.py
+M4-evaluation-and-operations/attachments/examples/requirements.txt
+M4-evaluation-and-operations/kim-00-diagnostic.md
+M4-evaluation-and-operations/kim-01-practical-work.md
+Project/README.md
+Project/attachments/.gitkeep
+README.md
+data/README.md
+data/krm-v3.0.xlsx
+docs/README.md
+docs/quality-checklist.md
+docs/rpd.md
+methodical-guidelines/README.md
+methodical-guidelines/students/README.md
+methodical-guidelines/teachers-assessment/README.md
+methodical-guidelines/teachers-resources/README.md
+other/README.md
+repository-tree.txt
+resources/README.md
+resources/benchmarks/README.md
+resources/datasets/README.md
+resources/llm-prompts/README.md
+resources/other/README.md
+resources/papers/README.md
+resources/problem-banks/README.md
+resources/software/python-libs/README.md
+resources/test-banks/README.md
+resources/textbooks/README.md
+team/README.md
+team/images/.gitkeep
